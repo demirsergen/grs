@@ -11,24 +11,34 @@ const MultiStepForm = () => {
   const questions = [
     {
       category: 'category1',
+      categoryName: 'demographic',
       question: 'Name of the protoganist?',
       options: ['Mark', 'Jane'],
     },
     {
       category: 'category1',
+      categoryName: 'demographic',
       question: 'How old are you now?',
       options: ['<18', '18-25', '25-39', '40 - 55', '55+'],
     },
     {
-      category: 'category2',
-      question: 'Do you believe this will work?',
-      options: ['Yes', 'No', 'Maybe'],
-      importance: true,
+      category: 'category1',
+      categoryName: 'demographic',
+      question: 'What gender do you identify as?',
+      options: ['Male', 'Female', 'Queer', 'Non-binary'],
     },
     {
       category: 'category2',
-      question: 'What gender do you identify as?',
-      options: ['Male', 'Female', 'Queer', 'Non-binary'],
+      categoryName: 'personality',
+      question: 'Which word describes you better?',
+      options: ['Carefree', 'Intense'],
+    },
+    {
+      category: 'category2',
+      categoryName: 'cognitive',
+      question: 'Do you believe this app will work as intended?',
+      options: ['Yes', 'No', 'Maybe'],
+      importance: true,
     },
   ];
 
@@ -55,7 +65,12 @@ const MultiStepForm = () => {
     // }, 3000);
   };
 
-  const handleInputChange = (category, question, value) => {
+  const handleInputChange = (
+    category,
+    question,
+    value,
+    categoryName
+  ) => {
     setFormData((prevFormData) => ({
       ...prevFormData,
       [category]: {
