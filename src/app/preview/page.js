@@ -17,7 +17,9 @@ const Preview = () => {
       <div>
         {Object.entries(form).map(([category, answers]) => (
           <div key={category} className="mb-4">
-            <h2 className="text-lg font-semibold mb-2">{category}</h2>
+            <h2 className="text-lg font-semibold mb-2">
+              {category.toUpperCase()}
+            </h2>
             <ul>
               {Object.entries(answers).map(([question, answer]) => (
                 <li key={question}>
