@@ -18,14 +18,26 @@ const MultiStepForm = () => {
     {
       category: 'category1',
       categoryName: 'demographic',
-      question: 'How old are you now?',
-      options: ['<18', '18-25', '25-39', '40 - 55', '55+'],
+      question: 'What generation are you a part of?',
+      options: ['Baby Boom', 'Gen X', 'Millenial', 'Gen Z', 'Alpha'],
     },
     {
       category: 'category1',
       categoryName: 'demographic',
       question: 'What gender do you identify as?',
-      options: ['Male', 'Female', 'Queer', 'Non-binary'],
+      options: [
+        'Male',
+        'Female',
+        'Queer',
+        'Non-binary',
+        'I hate labels',
+      ],
+    },
+    {
+      category: 'category1',
+      categoryName: 'demographic',
+      question: 'Where are you from?',
+      options: ['USA', 'Other'],
     },
     {
       category: 'category2',
@@ -35,6 +47,20 @@ const MultiStepForm = () => {
     },
     {
       category: 'category2',
+      categoryName: 'personality',
+      question: 'Generally, in life, what makes you happier?',
+      options: ['Quality', 'Variety'],
+      importance: true,
+    },
+    {
+      category: 'category2',
+      categoryName: 'personality',
+      question: 'Are you almost always on time?',
+      options: ['Yes', 'No'],
+      importance: true,
+    },
+    {
+      category: 'category3',
       categoryName: 'cognitive',
       question: 'Do you believe this app will work as intended?',
       options: ['Yes', 'No', 'Maybe'],
