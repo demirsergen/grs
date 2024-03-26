@@ -79,16 +79,9 @@ const MultiStepForm = () => {
 
     setIsSubmitted(true);
 
-    // router.push({
-    //   pathname: '/preview',
-    //   query: { data: JSON.stringify(formData) },
-    // });
-
-    router.push(`/preview/?formData=${JSON.stringify(formData)}`);
-
-    // setTimeout(() => {
-    //   window.location.reload();
-    // }, 3000);
+    setTimeout(() => {
+      router.push(`/preview/?formData=${JSON.stringify(formData)}`);
+    }, 3000);
   };
 
   const handleInputChange = (
